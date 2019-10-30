@@ -85,6 +85,7 @@
           }
         }
         this.tableData = tableData
+        this.$emit('on-update', this.tableData)
       },
       onClickCol(rowKey, colKey) {
         this.tableData[rowKey][colKey] = 'c'

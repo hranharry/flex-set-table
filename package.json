@@ -1,7 +1,7 @@
 {
   "name": "flex-set-table",
   "description": "基于flex布局的可以自定义表格行列数量，可以点击自定义表格中数据的表格组件",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "张浩然 <hranharry@sina.com>",
   "license": "MIT",
   "private": false,
