@@ -88,7 +88,6 @@
         this.$emit('on-update', this.tableData)
       },
       onClickCol(rowKey, colKey) {
-        this.tableData[rowKey][colKey] = 'c'
         this.$emit('on-click-col', { rowKey, colKey })
       },
       setCol({rowKey,colKey}, value) {
