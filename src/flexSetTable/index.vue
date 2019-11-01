@@ -9,22 +9,20 @@
 </template>
 <style scoped lang="less">
   .custom-table{
-    width: 100%;
+    overflow: auto;
     height: 100%;
     &-row{
-      width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
       align-items: stretch;
-      border-top: 1px solid #e7e7e7;
-      border-right: 1px solid #e7e7e7;
-      &:last-of-type{
+      box-sizing: border-box;
+      &:last-of-type > .custom-table-col{
         border-bottom: 1px solid #e7e7e7;
       }
     }
     &-col{
-      width: 100%;
+      flex: 1;
+      min-width: 100px;
       min-height: 50px;
       box-sizing: border-box;
       border-left: 1px solid #e7e7e7;
@@ -32,6 +30,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      border-top: 1px solid #e7e7e7;
+      &:last-of-type{
+        border-right: 1px solid #e7e7e7;
+      }
     }
   }
 </style>
@@ -69,10 +71,10 @@
       }
     },
     created() {
-      this.initModal()
+      this.initData()
     },
     methods: {
-      initModal() {
+      initData() {
         let tableData = {}
         for(let i = 1; i <= this.rows; i++) {
           tableData['row' + i] = {}

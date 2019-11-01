@@ -22,7 +22,12 @@ export default {
       }
     }
   },
+
   methods: {
+    // 设置行列初始数据后  重新调用initData
+    setRow() {
+      this.$refs.custable.initData()
+    },
     clickCol(keys) {
       this.currentKeys = keys
       this.setData()
@@ -37,6 +42,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>
