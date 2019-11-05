@@ -11,14 +11,12 @@
   .custom-table{
     overflow: auto;
     height: 100%;
+    border-bottom: 1px solid #e7e7e7;
     &-row{
       display: flex;
       flex-direction: row;
       align-items: stretch;
       box-sizing: border-box;
-      &:last-of-type > .custom-table-col{
-        border-bottom: 1px solid #e7e7e7;
-      }
     }
     &-col{
       flex: 1;
