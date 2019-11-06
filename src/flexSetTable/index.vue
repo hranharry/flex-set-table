@@ -77,7 +77,7 @@
         for(let i = 1; i <= this.rows; i++) {
           tableData['row' + i] = {}
           for(let j = 1; j <= this.cols; j++) {
-            if (this.originData['row' + i]) {
+            if (this.originData['row' + i] && this.originData['row' + i]['col' + j]) {
               tableData['row' + i]['col' + j] = this.originData['row' + i]['col' + j]
             } else {
               tableData['row' + i]['col' + j] = null
